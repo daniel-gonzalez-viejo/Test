@@ -1,11 +1,14 @@
 package daw.programacion.calculadora;
 
 
-import static org.junit.Assert.*;
-import org.junit.Test;
-import daw.programacion.test.calculadora.calculadora;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+import daw.programacion.calculadora.calculadora.calculadora;
+
 
 public class calculadoraTest {
+
             @Test
             public void dosSumarDosEsCuatro(){
                 int expected = 4;
@@ -13,8 +16,7 @@ public class calculadoraTest {
                 int numero2 = 2;
                 calculadora calc = new calculadora();
         
-               // assertEquals(expected, calc.sumar(numero1, numero2));
-                assertTrue("Dos más dos debería ser 4", expected == calc.sumar(numero1, numero2));
+                assertEquals(expected, calc.sumar(numero1, numero2));
             }
   
             @Test
@@ -24,8 +26,7 @@ public class calculadoraTest {
                 int numero2 = 3;
                 calculadora calc = new calculadora();
         
-               // assertEquals(expected, calc.sumar(numero1, numero2));
-                assertTrue("Siete menos tres debería ser 4", expected == calc.restar(numero1, numero2));
+                assertEquals(expected, calc.restar(numero1, numero2));
             }
 
             @Test
@@ -35,8 +36,7 @@ public class calculadoraTest {
                 int numero2 = 3;
                 calculadora calc = new calculadora();
         
-               // assertEquals(expected, calc.sumar(numero1, numero2));
-                assertTrue("Siete menos tres debería ser 4", expected == calc.multiplicar(numero1, numero2));
+                assertEquals(expected, calc.multiplicar(numero1, numero2));
             }
 
             @Test
@@ -46,8 +46,7 @@ public class calculadoraTest {
                 int numero2 = 2;
                 calculadora calc = new calculadora();
         
-               // assertEquals(expected, calc.sumar(numero1, numero2));
-                assertTrue("Siete entre dos debería ser 3", expected == calc.dividir(numero1, numero2));
+                assertEquals(expected, calc.dividir(numero1, numero2));
             }
 
 }
