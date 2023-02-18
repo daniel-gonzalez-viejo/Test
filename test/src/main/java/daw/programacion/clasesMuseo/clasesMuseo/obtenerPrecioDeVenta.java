@@ -1,6 +1,6 @@
 package daw.programacion.clasesMuseo.clasesMuseo;
 
-import practicacom.practica.programacion.clasesMuseo.tipoObra.TIPO_OBRA;
+import daw.programacion.clasesMuseo.clasesMuseo.tipoObra.TIPO_OBRA;
 
 public class obtenerPrecioDeVenta extends modificarObra implements TIPO_OBRA{
 
