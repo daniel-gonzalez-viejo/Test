@@ -11,7 +11,7 @@ public class darDeAltaUnaObraDeArteTest {
     public void testNuevaObra() {
         darDeAltaUnaObraDeArte alta = new darDeAltaUnaObraDeArte();
 
-        obras esperada = new obras("6", "Pintura", "La Gioconda", "Leonardo da Vinci", 1000000, 77, 18, "Óleo sobre tabla", "Pincel", 1, "Retrato de Lisa Gherardini");
+        obras esperada = new obras("7", "Pintura", "La Gioconda", "Leonardo da Vinci", 1000000, 77, 18, "Óleo sobre tabla", "Pincel", 1, "Retrato de Lisa Gherardini");
         alta.darDeAlta();
         obras actual = alta.nuevaObra();
 
