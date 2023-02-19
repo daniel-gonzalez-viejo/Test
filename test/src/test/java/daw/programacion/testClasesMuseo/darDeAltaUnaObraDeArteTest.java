@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.io.ByteArrayInputStream;
 
 import org.junit.jupiter.api.Test;
-
 import daw.programacion.clasesMuseo.clasesMuseo.obras;
 
 public class darDeAltaUnaObraDeArteTest {
