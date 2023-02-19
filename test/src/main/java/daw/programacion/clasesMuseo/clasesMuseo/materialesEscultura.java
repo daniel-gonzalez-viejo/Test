@@ -16,7 +16,7 @@ public class materialesEscultura {
     public static String getHierro() {
         return HIERRO;
     }
-    public String[] getMateriales() {
+    public static String[] getMateriales() {
         return MATERIALES;
     }
 

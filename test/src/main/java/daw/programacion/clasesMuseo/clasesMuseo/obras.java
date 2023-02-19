@@ -47,16 +47,16 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
     static boolean inserción_exitosa = false;    
 
     private String id;
-    private String Tipo;
-    private String Nombre;
-    private String Autor;
-    private double Precio;
-    private double Altura;
-    private double Peso;
-    private String Material;
-    private String Técnica;
-    private int Piezas;
-    private String Descripción;
+    private static String Tipo;
+    private static String Nombre;
+    private static String Autor;
+    private static double Precio;
+    private static double Altura;
+    private static double Peso;
+    private static String Material;
+    private static String Técnica;
+    private static int Piezas;
+    private static String Descripción;
 
     protected int tamaño;
     protected obras vec[];
@@ -97,13 +97,13 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
         contador++;
     }
 
-    public String getTipo() {
+    public static String getTipo() {
         return Tipo;
     }
-    public void setTipo(String tipo) {
+    public static void setTipo(String tipo) {
         Tipo = tipo;
     }
-    public String insertarTipo(String mensaje_error) {
+    public static String insertarTipo(String mensaje_error) {
         while (!inserción_exitosa) {
             boolean error_mostrado = false;
             Scanner sc = new Scanner(System.in);
@@ -124,14 +124,14 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
         inserción_exitosa = false;
         return getTipo();
     }
-    public String getNombre() {
+    public static String getNombre() {
         return Nombre;
     }
-    public void setNombre(String nombre) {
+    public static void setNombre(String nombre) {
         Nombre = nombre;
     }
 
-    public String insertarNombre() {
+    public static String insertarNombre() {
         while (!inserción_exitosa) {
             Scanner sc = new Scanner(System.in);
             System.out.print(NOMBRE);
@@ -149,28 +149,28 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
         return getNombre();
     }
 
-    public String getAutor() {
+    public static String getAutor() {
         return Autor;
     }
-    public void setAutor(String autor) {
+    public static void setAutor(String autor) {
         Autor = autor;
     }
 
-    public String insertarAutor() {
+    public static String insertarAutor() {
         Scanner sc = new Scanner(System.in);
         System.out.print(AUTOR);
         setAutor(sc.nextLine());
         return getAutor();
     }
 
-    public double getPrecio() {
+    public static double getPrecio() {
         return Precio;
     }
-    public void setPrecio(double precio) {
+    public static void setPrecio(double precio) {
         Precio = precio;
     }
 
-    public double insertarPrecio() {
+    public static double insertarPrecio() {
         while(!inserción_exitosa) {
             try{
                 Scanner sc = new Scanner(System.in);
@@ -186,13 +186,13 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
         return getPrecio();
     }
 
-    public double getAltura() {
+    public static double getAltura() {
         return Altura;
     }
-    public void setAltura(double altura) {
+    public static void setAltura(double altura) {
         Altura = altura;
     }
-    public double insertarAltura() {
+    public static double insertarAltura() {
         while(!inserción_exitosa) {
             try{
                 Scanner sc = new Scanner(System.in);
@@ -207,13 +207,13 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
         inserción_exitosa = false;
         return getAltura();
     }
-    public double getPeso() {
+    public static double getPeso() {
         return Peso;
     }
-    public void setPeso(double peso) {
+    public static void setPeso(double peso) {
         Peso = peso;
     }
-    public double insertarPeso() {
+    public static double insertarPeso() {
         while(!inserción_exitosa) {
             try{
                 Scanner sc = new Scanner(System.in);
@@ -229,13 +229,13 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
         return getPeso();
     }
 
-    public String getMaterial() {
+    public static String getMaterial() {
         return Material;
     }
-    public void setMaterial(String material) {
+    public static void setMaterial(String material) {
         Material = material;
     }
-    public String insertarMaterial(String mensaje_error) {
+    public static String insertarMaterial(String mensaje_error) {
         if (getTipo().equals(TIPO_OBRA.getPintura())) {
             setMaterial("   ");
         }
@@ -261,13 +261,13 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
         }
         return getMaterial();
     }
-    public String getTécnica() {
+    public static String getTécnica() {
         return Técnica;
     }
-    public void setTécnica(String técnica) {
+    public static void setTécnica(String técnica) {
         Técnica = técnica;
     }
-    public String insertarTecnica(String mensaje_error) {
+    public static String insertarTecnica(String mensaje_error) {
         if (getTipo().equals(TIPO_OBRA.getEscultura())) {
             setTécnica("   ");
         }
@@ -294,13 +294,13 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
         return getTécnica();
     }
 
-    public int getPiezas() {
+    public static int getPiezas() {
         return Piezas;
     }
-    public void setPiezas(int piezas) {
+    public static void setPiezas(int piezas) {
         Piezas = piezas;
     }
-    public int insertarPiezas() {
+    public static int insertarPiezas() {
         while(!inserción_exitosa) {
             try{
                 Scanner sc = new Scanner(System.in);
@@ -316,13 +316,13 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
         return getPiezas();
     }
 
-    public String getDescripción() {
+    public static String getDescripción() {
         return Descripción;
     }
-    public void setDescripción(String descripción) {
+    public static void setDescripción(String descripción) {
         Descripción = descripción;
     }
-    public String insertarDescripción() {
+    public static String insertarDescripción() {
         Scanner sc = new Scanner(System.in);
         System.out.print(DESCRIPCIÓN);
         setDescripción(sc.nextLine());

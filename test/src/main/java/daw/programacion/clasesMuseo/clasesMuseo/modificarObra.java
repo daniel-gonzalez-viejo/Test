@@ -5,27 +5,27 @@ public class modificarObra extends darDeAltaUnaObraDeArte {
 
     final static String MENSAJE_PEDIR_OBRA = CYAN + "¿Qué obra quieres visualizar?: " + BLANCO;
 
-    Scanner sc = new Scanner(System.in);
-    String código;
+    static Scanner sc = new Scanner(System.in);
+    static String código;
     
     public modificarObra() {
     }
 
-    public String getCódigo() {
+    public static String getCódigo() {
         return código;
     }
 
-    public void setCódigo(String cod) {
+    public static void setCódigo(String cod) {
         código = cod;
     }
 
-    public void pedirObra() {
+    public static void pedirObra() {
         System.out.print(MENSAJE_PEDIR_OBRA);
         setCódigo(sc.nextLine());
         System.out.println();
     }
 
-    public void modificar(obras aux) {             
+    public static void modificar(obras aux) {             
             if (aux != null) {
                 aux.setTipo(insertarTipo(MENSAJE_ERROR_TIPO));
                 aux.setNombre(insertarNombre());
