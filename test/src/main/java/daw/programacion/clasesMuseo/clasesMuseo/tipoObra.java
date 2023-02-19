@@ -1,6 +1,6 @@
 package daw.programacion.clasesMuseo.clasesMuseo;
 
-public class tipoObra {
+public abstract class tipoObra {
     protected static final String PINTURA = "Pintura"; 
     protected static final String ESCULTURA = "Escultura";
 
