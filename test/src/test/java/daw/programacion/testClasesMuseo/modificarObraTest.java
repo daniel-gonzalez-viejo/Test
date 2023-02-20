@@ -3,7 +3,7 @@ package daw.programacion.testClasesMuseo;
 import daw.programacion.clasesMuseo.clasesMuseo.modificarObra;
 import daw.programacion.clasesMuseo.clasesMuseo.obras;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Assertions.*;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

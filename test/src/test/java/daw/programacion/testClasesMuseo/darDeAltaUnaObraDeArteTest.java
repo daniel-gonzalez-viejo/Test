@@ -28,10 +28,7 @@ public class darDeAltaUnaObraDeArteTest {
         obra.setMaterial("");
         obra.setPiezas(1);
         obra.setDescripción("Retrato de Lisa Gherardini");
-
-    
         
-    
         // Comprobar que la obra se ha creado correctamente
         assertEquals("1", obra.getID());
         assertEquals("Pintura", obra.getTipo());
