@@ -58,9 +58,9 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
     private static int Piezas;
     private static String Descripción;
 
-    protected int tamaño;
-    protected obras vec[];
-    protected int posiciones;
+    protected static int tamaño;
+    protected static obras vec[];
+    protected static int posiciones;
 
     public obras(String id, String tipo, String nombre, String autor, double precio, double altura, double peso,
             String material, String técnica, int piezas, String descripción) {
