@@ -31,7 +31,7 @@ public class abrirMenu extends verObras{
     
     while (!interruptor) {
 
-        int opcion_menu = 0;
+        String opcion_menu = "0";
 
         System.out.println(ESPACIO_DIFERENCIADOR);
         for (final String OPCION_MENU : OPCIONES_MENU) {
@@ -40,7 +40,7 @@ public class abrirMenu extends verObras{
         System.out.println(ESPACIO_DIFERENCIADOR);
 
             try { 
-                opcion_menu = sc.nextInt();
+                opcion_menu = sc.nextLine();
                 System.out.println(ESPACIO_DIFERENCIADOR);
             }
             catch (InputMismatchException ime) {
@@ -50,45 +50,45 @@ public class abrirMenu extends verObras{
             }
 
         switch (opcion_menu){ 
-            case 1: {
+            case "1": {
                 System.out.println(Cabeceros());
                 System.out.println(galería.toStrin());
                 break;
             }  
-            case 2: {
+            case "2": {
                 darDeAltaUnaObraDeArte dar = new darDeAltaUnaObraDeArte();
                 galería.agregar(dar.nuevaObra());
                 break;
             } 
-            case 3: {
+            case "3": {
                 modificarObra mod = new modificarObra();
                 mod.pedirObra();
                 obras aux = galería.buscar(mod.getCódigo());
                 mod.modificar(aux);
                 break;
             } 
-            case 4: {
+            case "4": {
                 visualizarDatos vis = new visualizarDatos();
                 vis.pedirObra();
                 obras aux = galería.buscar(vis.getCódigo());
                 vis.mostrarDatos(aux);
                 break;
             }
-            case 5: {
+            case "5": {
                 obtenerPrecioDeVenta obt = new obtenerPrecioDeVenta();
                 obt.pedirObra();
                 obras aux = galería.buscar(obt.getCódigo());
                 obt.obtenerPrecio(aux);
                 break;
             }
-            case 6: {
+            case "6": {
                 imprimirEtiqueta imp = new imprimirEtiqueta();
                 imp.pedirObra();
                 obras aux = galería.buscar(imp.getCódigo());
                 imp.imprimirUnaEtiqueta(aux);
                 break;
             }  
-            case 7: {
+            case "7": {
                 System.out.println(MENSAJE_DESPEDIDA);
                 System.out.println("https://www.youtube.com/watch?v=4pNMdJPGooE");
                 interruptor = true;

@@ -5,7 +5,7 @@ public class visualizarDatos extends modificarObra{
     public visualizarDatos() {
     }
 
-    public void mostrarDatos(obras aux) {         
+    public String mostrarDatos(obras aux) {         
             if (aux != null) {
                 System.out.println("");
                 System.out.println("------------------------------");
