@@ -38,29 +38,29 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
     final static String MENSAJE_ERROR_PESO = ROJO + "El peso debe ser de carácter numérico " + BLANCO;
     final static String MENSAJE_ERROR_PIEZAS = ROJO + "La cantidad de piezas debe ser de carácter numérico " + BLANCO;
 
-    static obras P1 = new obras("1" , "Pintura", "Guernica", "P.Picasso" , 1000 , 5 , 2 , " " ,   "Óleo" , 5 , "Cuadro de la guerra civil");
-    static obras P2 = new obras("2" , "Pintura", "La Vie" , "P.Picasso" , 200 , 5 , 1 , " " , "Óleo" , 5 , "Óleo");
-    static obras P3 = new obras("3" , "Pintura", "El Sueño" , "P.Picasso" , 300 , 5 , 1.3 , " " ,   "Óleo" , 5 , "Óleo");
-    static obras P4 = new obras("4" , "Pintura", "Retrato.D Maar" , "P.Picasso" , 400 , 5 , 1 , " " , "Óleo" , 5 , "Óleo");
-    static obras P5 = new obras("5" , "Escultura", "El piel roja" , "U.Chueca" , 350 , 5 , 1 , "Acero" , " " ,  5 , "Escultura");
+    obras P1 = new obras("1" , "Pintura", "Guernica", "P.Picasso" , 1000 , 5 , 2 , " " ,   "Óleo" , 5 , "Cuadro de la guerra civil");
+    obras P2 = new obras("2" , "Pintura", "La Vie" , "P.Picasso" , 200 , 5 , 1 , " " , "Óleo" , 5 , "Óleo");
+    obras P3 = new obras("3" , "Pintura", "El Sueño" , "P.Picasso" , 300 , 5 , 1.3 , " " ,   "Óleo" , 5 , "Óleo");
+    obras P4 = new obras("4" , "Pintura", "Retrato.D Maar" , "P.Picasso" , 400 , 5 , 1 , " " , "Óleo" , 5 , "Óleo");
+    obras P5 = new obras("5" , "Escultura", "El piel roja" , "U.Chueca" , 350 , 5 , 1 , "Acero" , " " ,  5 , "Escultura");
 
-    static boolean inserción_exitosa = false;    
+    boolean inserción_exitosa = false;    
 
     private String id;
-    private static String Tipo;
-    private static String Nombre;
-    private static String Autor;
-    private static double Precio;
-    private static double Altura;
-    private static double Peso;
-    private static String Material;
-    private static String Técnica;
-    private static int Piezas;
-    private static String Descripción;
+    private String Tipo;
+    private String Nombre;
+    private String Autor;
+    private double Precio;
+    private double Altura;
+    private double Peso;
+    private String Material;
+    private String Técnica;
+    private int Piezas;
+    private String Descripción;
 
-    protected static int tamaño;
-    protected static obras vec[];
-    protected static int posiciones;
+    protected int tamaño;
+    protected obras vec[];
+    protected int posiciones;
 
     public obras(String id, String tipo, String nombre, String autor, double precio, double altura, double peso,
             String material, String técnica, int piezas, String descripción) {
@@ -80,7 +80,7 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
     public obras() {
     }
 
-    final static obras[] OBRAS_INICIALES = {P1, P2, P3, P4, P5};
+    final obras[] OBRAS_INICIALES = {P1, P2, P3, P4, P5};
 
     public String getID() {
         return id;
@@ -97,13 +97,13 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
         contador++;
     }
 
-    public static String getTipo() {
+    public String getTipo() {
         return Tipo;
     }
-    public static void setTipo(String tipo) {
+    public void setTipo(String tipo) {
         Tipo = tipo;
     }
-    public static String insertarTipo(String mensaje_error) {
+    public String insertarTipo(String mensaje_error) {
         while (!inserción_exitosa) {
             boolean error_mostrado = false;
             Scanner sc = new Scanner(System.in);
@@ -124,14 +124,14 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
         inserción_exitosa = false;
         return getTipo();
     }
-    public static String getNombre() {
+    public String getNombre() {
         return Nombre;
     }
-    public static void setNombre(String nombre) {
+    public void setNombre(String nombre) {
         Nombre = nombre;
     }
 
-    public static String insertarNombre() {
+    public String insertarNombre() {
         while (!inserción_exitosa) {
             Scanner sc = new Scanner(System.in);
             System.out.print(NOMBRE);
@@ -149,28 +149,28 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
         return getNombre();
     }
 
-    public static String getAutor() {
+    public String getAutor() {
         return Autor;
     }
-    public static void setAutor(String autor) {
+    public void setAutor(String autor) {
         Autor = autor;
     }
 
-    public static String insertarAutor() {
+    public String insertarAutor() {
         Scanner sc = new Scanner(System.in);
         System.out.print(AUTOR);
         setAutor(sc.nextLine());
         return getAutor();
     }
 
-    public static double getPrecio() {
+    public double getPrecio() {
         return Precio;
     }
-    public static void setPrecio(double precio) {
+    public void setPrecio(double precio) {
         Precio = precio;
     }
 
-    public static double insertarPrecio() {
+    public double insertarPrecio() {
         while(!inserción_exitosa) {
             try{
                 Scanner sc = new Scanner(System.in);
@@ -186,13 +186,13 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
         return getPrecio();
     }
 
-    public static double getAltura() {
+    public double getAltura() {
         return Altura;
     }
-    public static void setAltura(double altura) {
+    public void setAltura(double altura) {
         Altura = altura;
     }
-    public static double insertarAltura() {
+    public double insertarAltura() {
         while(!inserción_exitosa) {
             try{
                 Scanner sc = new Scanner(System.in);
@@ -207,13 +207,13 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
         inserción_exitosa = false;
         return getAltura();
     }
-    public static double getPeso() {
+    public double getPeso() {
         return Peso;
     }
-    public static void setPeso(double peso) {
+    public void setPeso(double peso) {
         Peso = peso;
     }
-    public static double insertarPeso() {
+    public double insertarPeso() {
         while(!inserción_exitosa) {
             try{
                 Scanner sc = new Scanner(System.in);
@@ -229,13 +229,13 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
         return getPeso();
     }
 
-    public static String getMaterial() {
+    public String getMaterial() {
         return Material;
     }
-    public static void setMaterial(String material) {
+    public void setMaterial(String material) {
         Material = material;
     }
-    public static String insertarMaterial(String mensaje_error) {
+    public String insertarMaterial(String mensaje_error) {
         if (getTipo().equals(TIPO_OBRA.getPintura())) {
             setMaterial("   ");
         }
@@ -261,13 +261,13 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
         }
         return getMaterial();
     }
-    public static String getTécnica() {
+    public String getTécnica() {
         return Técnica;
     }
-    public static void setTécnica(String técnica) {
+    public void setTécnica(String técnica) {
         Técnica = técnica;
     }
-    public static String insertarTecnica(String mensaje_error) {
+    public String insertarTecnica(String mensaje_error) {
         if (getTipo().equals(TIPO_OBRA.getEscultura())) {
             setTécnica("   ");
         }
@@ -294,13 +294,13 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
         return getTécnica();
     }
 
-    public static int getPiezas() {
+    public int getPiezas() {
         return Piezas;
     }
-    public static void setPiezas(int piezas) {
+    public void setPiezas(int piezas) {
         Piezas = piezas;
     }
-    public static int insertarPiezas() {
+    public int insertarPiezas() {
         while(!inserción_exitosa) {
             try{
                 Scanner sc = new Scanner(System.in);
@@ -316,13 +316,13 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
         return getPiezas();
     }
 
-    public static String getDescripción() {
+    public String getDescripción() {
         return Descripción;
     }
-    public static void setDescripción(String descripción) {
+    public void setDescripción(String descripción) {
         Descripción = descripción;
     }
-    public static String insertarDescripción() {
+    public String insertarDescripción() {
         Scanner sc = new Scanner(System.in);
         System.out.print(DESCRIPCIÓN);
         setDescripción(sc.nextLine());
@@ -333,7 +333,7 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
         return tamaño;
     }
 
-    public static String Cabeceros() {
+    public String Cabeceros() {
         String separador = CYAN + "| %1s | %9s | %15s | %10s | %10s | %10s | %10s | %10s |%10s | %5s | %30s |%n" + BLANCO;
 
         String s = String.format(separador,

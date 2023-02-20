@@ -3,29 +3,29 @@ import java.util.Scanner;
 
 public class modificarObra extends darDeAltaUnaObraDeArte {
 
-    final static String MENSAJE_PEDIR_OBRA = CYAN + "¿Qué obra quieres visualizar?: " + BLANCO;
+    final String MENSAJE_PEDIR_OBRA = CYAN + "¿Qué obra quieres visualizar?: " + BLANCO;
 
-    static Scanner sc = new Scanner(System.in);
-    static String código;
+    Scanner sc = new Scanner(System.in);
+    String código;
     
     public modificarObra() {
     }
 
-    public static String getCódigo() {
+    public String getCódigo() {
         return código;
     }
 
-    public static void setCódigo(String cod) {
+    public void setCódigo(String cod) {
         código = cod;
     }
 
-    public static void pedirObra() {
+    public void pedirObra() {
         System.out.print(MENSAJE_PEDIR_OBRA);
         setCódigo(sc.nextLine());
         System.out.println();
     }
 
-    public static void modificar(obras aux) {             
+    public void modificar(obras aux) {             
             if (aux != null) {
                 aux.setTipo(insertarTipo(MENSAJE_ERROR_TIPO));
                 aux.setNombre(insertarNombre());

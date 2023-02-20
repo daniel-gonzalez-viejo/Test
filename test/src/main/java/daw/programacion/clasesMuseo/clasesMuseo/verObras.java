@@ -11,7 +11,7 @@ public class verObras extends obras{
     public verObras() {
     }
 
-    public static void aumentarTamaño(obras valor) { 
+    public void aumentarTamaño(obras valor) { 
         if (tamaño == vec.length) {
           obras[] newData = new obras[vec.length + 1];
           System.arraycopy(vec, 0, newData, 0, vec.length);
@@ -20,7 +20,7 @@ public class verObras extends obras{
         vec[tamaño++] = valor;
     }
 
-    public static boolean agregar (obras n) {
+    public boolean agregar (obras n) {
         aumentarTamaño(n);
         if(posiciones < tamaño) {
             vec[posiciones++] = n;
