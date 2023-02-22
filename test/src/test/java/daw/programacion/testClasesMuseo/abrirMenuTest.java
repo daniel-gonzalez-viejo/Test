@@ -69,7 +69,7 @@ public class abrirMenuTest {
         mod.setCódigo("001");
         mod.modificar(obra);
         // Comprobamos que la obra se modificó correctamente
-        assertEquals("Renacimiento Tardío", obra.getEstilo());
+        assertEquals("Renacimiento Tardío", obra.getTipo());
     }
 
     @Test

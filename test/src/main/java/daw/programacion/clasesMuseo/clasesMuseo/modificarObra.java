@@ -25,7 +25,7 @@ public class modificarObra extends darDeAltaUnaObraDeArte {
         System.out.println();
     }
 
-    public static void modificar(obras aux) {             
+    public void modificar(obras aux) {             
             if (aux != null) {
                 aux.setTipo(insertarTipo(MENSAJE_ERROR_TIPO));
                 aux.setNombre(insertarNombre());
