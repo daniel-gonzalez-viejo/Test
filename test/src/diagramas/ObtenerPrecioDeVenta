@@ -1,0 +1,24 @@
+______________________________________________
+|                obtenerPrecioDeVenta          |
+|____________________________________________ _|
+| - COMISION_GALERÍA: String                   |
+| - IMPORTE_POR_PESO: String                   |
+| - IMPORTE_POR_ALTURA: String                 |
+| - PRECIO_VENTA: String                       |
+| - PRECIO_VENTA_DOLARES: String               |
+| - DESCUENTO_PINTURA: String                  |
+| - DESCUENTO_ESCULTURA: String                |
+| - importePeso: double                        |
+| - importeAltura: double                      |
+| - importePiezas: double                      |
+| - descuento: double                          |
+| - precio_final: double                       |
+| - comision: double                           |
+|_____________________________________________ |
+| + obtenerPrecio(aux: obras): void            |
+| + importePorPeso(peso: double): void         |
+| + importePorAltura(altura: double): void     |
+| + importePorPiezaAdicional(piezas: int): void|
+| + conversionADolares(precioFinal: double): void
+| + descuentosPorObra(aux: obras): void        |
+|______________________________________________|

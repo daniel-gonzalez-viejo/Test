@@ -1,0 +1,18 @@
++-------------------------+
+|  tipoObra               |
++-------------------------+
+| # PINTURA : String       |
+| # ESCULTURA : String    |
++-------------------------+
+| + getPintura() : String |
+| + getEscultura() : String 
+| + getTipos() : String[] |
+|                         |
++-------------------------+
+|+ TIPOS_OBRA  |
++-------------------------+
+| + getPintura() : String |
+| + getEscultura() : String 
+| + getTipos() : String[] |
+|                         |
++-------------------------+

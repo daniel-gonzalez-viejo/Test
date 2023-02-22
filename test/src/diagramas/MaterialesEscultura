@@ -1,0 +1,23 @@
++-------------------------+
+|  materialesEscultura    |
++-------------------------+
+| # ACERO : String        |
+| # COBRE : String        |
+| # HIERRO : String       |
+| # MATERIALES : String[] |
++-------------------------+
+| + getAcero() : String   |
+| + getCobre() : String 
+| + getHierro() : String 
+| + getMateriales() : String[] 
+|                         |
++-----------------------------+
+|+ TIPO_MATERIALES_ESCULTURA  |
++-----------------------------+
+|                             |
+| + getAcero() : String       |
+| + getCobre() : String       |
+| + getHierro() : String      |
+| + getMateriales() : String[]|
+|                             |
++-----------------------------+

@@ -1,0 +1,61 @@
++---------------------------------+
+|   darDeAltaUnaObraDeArte        |
++---------------------------------+
+| + darDeAltaUnaObraDeArte()      |
+| + darDeAlta()                   |
+| + nuevaObra()                   |
++------------------+--------------+
+                   ^
+                   |
+            hereda de verObras
+                   |
+                   v
++------------------+--------------+
+|   verObras                      |
++------------------+--------------+
+|                                 |
+| - insertarID()                  |
+| - insertarTipo()                |
+| - insertarNombre()              |
+| - insertarAutor()               |
+| - insertarPrecio()              |
+| - insertarAltura()              |
+| - insertarPeso()                |
+| - insertarMaterial()            |
+| - insertarTecnica()             |
+| - insertarPiezas()              |
+| - insertarDescripción()         |
+|                                 |
++---------------------------------+
+|                                 |
+|                                 |
+|                                 |
++------------------+--------------+
+                   ^
+                   |
+             clase abstracta
+                   |
+                   v
++------------------+--------------+
+|   obras                         |
++------------------+--------------+
+|                                 |
+| + obras()                       |
+| + obras(ID, tipo, nombre,       |
+|         autor, precio, altura,  |
+|         peso, material,         |
+|         técnica, piezas,        |
+|         descripción)            |
+| - ID : int                      |
+| - tipo : String                 |
+| - nombre : String               |
+| - autor : String                |
+| - precio : float                |
+| - altura : float                |
+| - peso : float                  |
+| - material : String             |
+| - técnica : String              |
+| - piezas : int                  |
+| - descripción : String          |
+|                                 |
++---------------------------------+

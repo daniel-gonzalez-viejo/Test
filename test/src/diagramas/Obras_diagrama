@@ -1,0 +1,56 @@
++----------------------+-------------------------------------+
+|     Atributos        |      Métodos                        |
++----------------------+-------------------------------------+
+| - id : String        | + getID() : String                  |
+| - Tipo : String      | + setID(String)                     |
+| - Nombre : String    | + insertarID()                      |
+| - Autor : String     | + getTipo() : String                |
+| - Precio : double    | + setTipo(String)                   |
+| - Altura : double    | + getNombre() : String              |
+| - Peso : double      | + setNombre(String)                 |
+| - Material : String  | + getAutor() : String               |
+| - Técnica : String   | + setAutor(String)                  |
+| - Piezas : int       | + getPrecio() : double              |
+| - Descripción :String| + setPrecio(double)                 |
+| - tamaño : int       | + getAltura() : double              |
+| - vec[] : obras      | + setAltura(double)                 |
+| - posiciones : int   | + getPeso() : double                |
+|                      | + setPeso(double)                   |
+|                      | + getMaterial() : String            |
+|                      | + setMaterial(String)               |
+|                      | + getTécnica() : String             |
+|                      | + setTécnica(String)                |
+|                      | + getPiezas() : int                 |
+|                      | + setPiezas(int)                    |
+|                      | + getDescripción() : String         |
+|                      | + setDescripción(String)            |
++----------------------+-------------------------------------+
+|     Constantes       |
++----------------------+
+| - ID : String        |
+| - TIPO : String      |
+| - NOMBRE : String    |
+| - AUTOR : String     |
+| - PRECIO : String    |
+| - ALTURA : String    |
+| - PESO : String      |
+| - MATERIAL : String  |
+| - TÉCNICA : String   |
+| - PIEZAS : String    |
+| - DESCRIPCIÓN : String|
+| - MENSAJE_ERROR_TIPO_EN_BLANCO : String 
+| - MENSAJE_ERROR_TIPO : String 
+| - MENSAJE_ERROR_MATERIAL : String 
+| - MENSAJE_ERROR_TECNICA : String 
+| - MENSAJE_ERROR_PRECIO : String 
+| - MENSAJE_ERROR_ALTURA : String 
+| - MENSAJE_ERROR_PESO : String 
+| - MENSAJE_ERROR_PIEZAS : String 
+| - P1 : obras         |
+| - P2 : obras         |
+| - P3 : obras         |
+| - P4 : obras         |
+| - P5 : obras         |
+| - inserción_exitosa : boolean 
+| - OBRAS_INICIALES : obras[] 
++----------------------+-------------------+

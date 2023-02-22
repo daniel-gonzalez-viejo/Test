@@ -1,9 +1,9 @@
 package daw.programacion.clasesMuseo.clasesMuseo;
 
 public class materialesPintura {
-    final static String OLEO = "Oleo";
-    final static String ACUARELA = "Acuarela";
-    final static String CARBONCILLO = "Carboncillo";
+    protected final static String OLEO = "Oleo";
+    protected final static String ACUARELA = "Acuarela";
+    protected final static String CARBONCILLO = "Carboncillo";
 
     final static String MATERIALES[] = {OLEO, ACUARELA, CARBONCILLO};
 

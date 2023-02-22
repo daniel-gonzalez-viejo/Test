@@ -1,0 +1,19 @@
++----------------+     
+|    verObras    |     
++----------------+       
+| -vec: obras[]  |      
+| -tamaño: int   |     
+| -posiciones:int|      
+|                |      
+| +verObras(int) |      
+| +aumentarTamaño(obras): void
+| +agregar(obras): boolean   | 
+| +buscar(String): obras     | 
+| +toString(): String        | 
+|                            | 
+|                            | 
+|                            | 
+|                            | 
+|                            | 
+|                            |
++----------------------------+

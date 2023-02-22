@@ -1,0 +1,23 @@
++-------------------------+
+|  materialesPintura      |
++-------------------------+
+| # OLEO : String         |
+| # ACUARELA : String     |
+| # CARBONCILLO : String  |
+| # MATERIALES : String[] |
++-------------------------+
+| + getOleo() : String    |
+| + getAcuarela() : String 
+| + getCarboncillo() : String 
+| + getMateriales() : String[] 
+|                         |
++-------------------------+
+|+ TIPO_MATERIALES_PINTURA|
++-----------------------------+
+|                             |
+| + getOleo() : String        |
+| + getAcuarela() : String    |
+| + getCarboncillo() : String |
+| + getMateriales() : String[]|
+|                             |
++-----------------------------+
