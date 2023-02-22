@@ -1,6 +1,7 @@
 package daw.programacion.testClasesMuseo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 import daw.programacion.clasesMuseo.clasesMuseo.verObras;
@@ -22,37 +23,39 @@ public class verObrasTest {
 
     @Test
     public void aumentarTamaño() {
-        verObras aa = new verObras(2);
-        obras obra1 = new obras("001", "La Mona Lisa", "Leonardo da Vinci", null, 0, 0, 0, null, null, 0, null);
-        obras obra2 = new obras("001", "La Mona Lisa", "Leonardo da Vinci", null, 0, 0, 0, null, null, 0, null);
-        verObras.aumentarTamaño(obra1);
-        verObras.aumentarTamaño(obra2);
-        obras OBRAS[] = {obra1,obra2};
-        assertEquals(2, OBRAS.length);
+        obras obras = new obras(null, null, null, null, 5, 0, 0, null, null, 0, null);
+        verObras ver = new verObras(5);
+
+        assertEquals(obras, ver.aumentarTamaño(obras));
     }
 
     @Test
     public void agregar() {
-        verObras aa = new verObras(2);
+        obras obras = new obras(null, null, null, null, 5, 0, 0, null, null, 0, null);
+        verObras ver = new verObras(2);
 
-        assertEquals(true, aa.agregar(aa));
-
+        assertTrue(ver.agregar(obras));
     }
 
     @Test
-    public void buscar() {
-        verObras aa = new verObras(2);
+    public void testBuscar() {
+        obras obras = new obras(null, null, null, null, 5, 0, 0, null, null, 0, null);
+        obras obra1 = new obras("6", "La Gioconda", null, null, 0, 0, 0, null, null, 0, null);
 
-        assertEquals(null, aa.buscar("1"));
+        String expected = String.valueOf(obras.getOBRAS_INICIALES().length + 1);
+
+        // buscar obra existente
+        assertEquals(expected, obra1.insertarID());
 
     }
 
     @Test
     public void toStrin() {
-        verObras aa = new verObras(2);
-        obras obra1 = new obras("", null, null, null, 0, 0, 0, null, null, 0, null);
+        verObras aa = new verObras(3);
+        obras obra1 = new obras("5", "ddd", "dddd", "ddd", 3, 2, 4, "tgff", "dfggh", 3, "dtyuytr");
+        aa.agregar(obra1);
 
-        String s = obra1.getID();
+        String s = obra1.toString();
         assertEquals(s, aa.toStrin());
 
     }

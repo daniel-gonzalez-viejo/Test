@@ -18,6 +18,7 @@ public class visualizarDatos extends modificarObra{
                 System.out.println(DESCRIPCIÓN + aux.getDescripción());
                 System.out.println("");
             } 
+            return "";
     }
 
 }

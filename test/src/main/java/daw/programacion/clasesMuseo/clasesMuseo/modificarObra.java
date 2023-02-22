@@ -19,10 +19,11 @@ public class modificarObra extends darDeAltaUnaObraDeArte {
         código = cod;
     }
 
-    public void pedirObra() {
+    public String pedirObra() {
         System.out.print(MENSAJE_PEDIR_OBRA);
         setCódigo(sc.nextLine());
         System.out.println();
+        return getCódigo();
     }
 
     public void modificar(obras aux) {             

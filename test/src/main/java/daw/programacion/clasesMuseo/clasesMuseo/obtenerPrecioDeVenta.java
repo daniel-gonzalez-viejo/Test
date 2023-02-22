@@ -22,7 +22,7 @@ public class obtenerPrecioDeVenta extends modificarObra implements TIPO_OBRA{
     public obtenerPrecioDeVenta() {
     }
 
-    public void obtenerPrecio(obras aux) {
+    public String obtenerPrecio(obras aux) {
         if (aux != null) {
             comision = aux.getPrecio()*0.25;
             importePorPeso(aux.getPeso());
@@ -43,8 +43,11 @@ public class obtenerPrecioDeVenta extends modificarObra implements TIPO_OBRA{
             descuentosPorObra(aux);
             System.out.println(PRECIO_VENTA + (precio_final - descuento));
             System.out.println("");
-        } 
-
+        }
+        return "" + "------------------------------" + "\n" + NOMBRE + aux.getNombre() + "\n" + ALTURA + aux.getAltura() + "\n" +
+        PESO + aux.getPeso() + "\n" + PRECIO + aux.getPrecio() + "\n" + COMISION_GALERÍA + comision + "\n" +
+        IMPORTE_POR_PESO + importePeso + "\n" + IMPORTE_POR_ALTURA + importeAltura + "\n" + PRECIO_VENTA + precio_final + "\n" +
+        PRECIO_VENTA + precio_final*0.99 + "\n" + DESCUENTO_PINTURA + descuento + "\n" + PRECIO_VENTA + (precio_final - descuento) + "\n" + "";
     }
 
     public void importePorPeso(double peso) {

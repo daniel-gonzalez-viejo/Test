@@ -38,11 +38,11 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
     final static String MENSAJE_ERROR_PESO = ROJO + "El peso debe ser de carácter numérico " + BLANCO;
     final static String MENSAJE_ERROR_PIEZAS = ROJO + "La cantidad de piezas debe ser de carácter numérico " + BLANCO;
 
-    obras P1 = new obras("1" , "Pintura", "Guernica", "P.Picasso" , 1000 , 5 , 2 , " " ,   "Óleo" , 5 , "Cuadro de la guerra civil");
-    obras P2 = new obras("2" , "Pintura", "La Vie" , "P.Picasso" , 200 , 5 , 1 , " " , "Óleo" , 5 , "Óleo");
-    obras P3 = new obras("3" , "Pintura", "El Sueño" , "P.Picasso" , 300 , 5 , 1.3 , " " ,   "Óleo" , 5 , "Óleo");
-    obras P4 = new obras("4" , "Pintura", "Retrato.D Maar" , "P.Picasso" , 400 , 5 , 1 , " " , "Óleo" , 5 , "Óleo");
-    obras P5 = new obras("5" , "Escultura", "El piel roja" , "U.Chueca" , 350 , 5 , 1 , "Acero" , " " ,  5 , "Escultura");
+    static obras P1 = new obras("1" , "Pintura", "Guernica", "P.Picasso" , 1000 , 5 , 2 , " " ,   "Óleo" , 5 , "Cuadro de la guerra civil");
+    static obras P2 = new obras("2" , "Pintura", "La Vie" , "P.Picasso" , 200 , 5 , 1 , " " , "Óleo" , 5 , "Óleo");
+    static obras P3 = new obras("3" , "Pintura", "El Sueño" , "P.Picasso" , 300 , 5 , 1.3 , " " ,   "Óleo" , 5 , "Óleo");
+    static obras P4 = new obras("4" , "Pintura", "Retrato.D Maar" , "P.Picasso" , 400 , 5 , 1 , " " , "Óleo" , 5 , "Óleo");
+    static obras P5 = new obras("5" , "Escultura", "El piel roja" , "U.Chueca" , 350 , 5 , 1 , "Acero" , " " ,  5 , "Escultura");
 
     boolean inserción_exitosa = false;    
 
@@ -80,7 +80,11 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
     public obras() {
     }
 
-    final obras[] OBRAS_INICIALES = {P1, P2, P3, P4, P5};
+    final static obras[] OBRAS_INICIALES = {P1, P2, P3, P4, P5};
+
+    public obras[] getOBRAS_INICIALES() {
+        return OBRAS_INICIALES;
+    }
 
     public String getID() {
         return id;
@@ -90,11 +94,12 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
         id = iD;
     }
 
-    public void insertarID() {
+    public String insertarID() {
         int contador = OBRAS_INICIALES.length+1;
-        String id = Integer.toString(contador);
+        id = Integer.toString(contador);
         setID(id);
         contador++;
+        return id;
     }
 
     public String getTipo() {
@@ -333,7 +338,7 @@ public class obras implements TIPO_OBRA, TIPO_MATERIALES_ESCULTURA, TIPO_MATERIA
         return tamaño;
     }
 
-    public String Cabeceros() {
+    public static String Cabeceros() {
         String separador = CYAN + "| %1s | %9s | %15s | %10s | %10s | %10s | %10s | %10s |%10s | %5s | %30s |%n" + BLANCO;
 
         String s = String.format(separador,

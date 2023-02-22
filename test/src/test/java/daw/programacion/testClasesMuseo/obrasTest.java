@@ -17,6 +17,14 @@ import daw.programacion.clasesMuseo.clasesMuseo.tipoObra;
 public class obrasTest {
 
     @Test
+    public void getOBRAS_INICIALES() {
+        obras obra = new obras();
+        int expected = 5;
+
+        assertEquals(expected, obra.getOBRAS_INICIALES().length);
+    }
+
+    @Test
     public void setID_GetID() {
         obras obra = new obras();
         String id = "1";

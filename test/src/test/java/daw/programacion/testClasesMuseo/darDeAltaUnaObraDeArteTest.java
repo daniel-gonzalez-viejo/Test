@@ -13,11 +13,10 @@ public class darDeAltaUnaObraDeArteTest {
     public void darDeAlta() {
         // Crear un objeto de la clase Obras
         obras obra = new obras();
-    
+
         // Simular la entrada de teclado del usuario utilizando Scanner
         ByteArrayInputStream inputStream = new ByteArrayInputStream("1".getBytes());
-        System.setIn(inputStream);
-        obra.setID("1");
+        obra.insertarID();
         obra.setTipo("Pintura");
         obra.setNombre("La Gioconda");
         obra.setAutor("Leonardo da Vinci");
@@ -28,9 +27,9 @@ public class darDeAltaUnaObraDeArteTest {
         obra.setMaterial("");
         obra.setPiezas(1);
         obra.setDescripción("Retrato de Lisa Gherardini");
-        
+
         // Comprobar que la obra se ha creado correctamente
-        assertEquals("1", obra.getID());
+        assertEquals("6", obra.getID());
         assertEquals("Pintura", obra.getTipo());
         assertEquals("La Gioconda", obra.getNombre());
         assertEquals("Leonardo da Vinci", obra.getAutor());
